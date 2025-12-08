@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Soulflow.gr</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<section id="one" class="main">
+			<div class="container">
+				<div class="content">
+					<header>
+						<h1>Ποια είμαι</h1>
+					</header>
+					<p><span class="image left"><img src="images/Lilly.jpg" alt="Lilly Pofile Picture" /></span>Ονομάζομαι Λαμπρινή Σιουχλέρη και είμαι Σύμβουλος Ψυχικής Υγείας, με στόχο να στηρίζω ανθρώπους που επιθυμούν να κατανοήσουν βαθύτερα τον εαυτό τους και να βρουν τρόπους να ζουν με περισσότερη ισορροπία, πληρότητα και εσωτερική γαλήνη.<br />
+					Η επαγγελματική μου πορεία στον χώρο της ψυχικής υγείας ξεκίνησε από την ανάγκη μου να κατανοήσω τον άνθρωπο — τα συναισθήματά του, τις σχέσεις του και τον τρόπο που συνδέεται με τον εαυτό του και τους άλλους. Μέσα από συνεχή εκπαίδευση, εποπτεία και προσωπική εξέλιξη, επιδιώκω να προσφέρω έναν χώρο αποδοχής, ασφάλειας και αυθεντικής επικοινωνίας.<br />
+					Πιστεύω ότι κάθε άνθρωπος έχει μέσα του τη δύναμη και τη σοφία να αντιμετωπίσει τις δυσκολίες του, αρκεί να του δοθεί η ευκαιρία να τις αναγνωρίσει και να τις επεξεργαστεί σε ένα περιβάλλον κατανόησης και σεβασμού.<br />
+					Σκοπός μου δεν είναι να δώσω έτοιμες λύσεις, αλλά να συνοδεύσω τον άνθρωπο στη διαδικασία ανακάλυψης του δικού του δρόμου προς την αυτογνωσία και την ψυχική του ενδυνάμωση.</p>
+				</div>
+				<ul class="actions fit small special">
+					<li><a href="index.html" class="button primary fit small">ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΑΡΧΙΚΗ ΣΕΛΙΔΑ</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="footer">
+			<div class="container" id="contactform">
+				<header class="major">
+					<h3>Φόρμα Επικοινωνίας</h3>
+				</header>
+
+				<form id="contact-form">
+					<div class="row gtr-uniform">
+						<div class="col-6 col-12-xsmall">
+							<input type="text" name="name" id="name" placeholder="Όνομα" required />
+						</div>
+						<div class="col-6 col-12-xsmall">
+							<input type="email" name="email" id="email" placeholder="Email" required />
+						</div>
+						<div class="col-12">
+							<textarea name="message" id="message" placeholder="Μήνυμα" rows="4" required></textarea>
+						</div>
+						<div class="col-12">
+							<ul class="actions special">
+								<li>
+									<input type="submit" value="ΑΠΟΣΤΟΛΗ" class="primary" />
+								</li>
+							</ul>
+						</div>
+					</div>
+				</form>
+				<div id="success-message" style="display:none; text-align:center; padding:30px;" role="status" aria-live="polite" aria-atomic="true">
+					<h3>Το μήνυμά σου στάλθηκε επιτυχώς!</h3>
+					<p>Θα επικοινωνήσουμε μαζί σου το συντομότερο.</p>
+				</div>
+			</div>
+			<footer>
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="mailto:soulflow.gr@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>Copyright &copy; 2025</li>
+					<li>Phone: <a href="tel:+306932123145">+30 6932 123 145</a></li>
+					<li>Email: <a href="mailto:soulflow.gr@gmail.com">soulflow.gr@gmail.com</a></li>
+				</ul>
+			</footer>
+		</section>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+		<script>
+		  (function(){
+			emailjs.init("s_aK4B0XzydrNTiST");
+		  })();
+
+		  document.getElementById("contact-form").addEventListener("submit", function(e) {
+			e.preventDefault();
+
+			emailjs.sendForm(
+			  "service_m92koei",
+			  "template_klgu0gm",
+			  this
+			).then(function() {
+
+			  // Hide the form
+			  document.getElementById("contact-form").style.display = "none";
+
+			  // Show success message
+			  document.getElementById("success-message").style.display = "block";
+
+			}, function(error) {
+			  alert("Αποτυχία αποστολής. Προσπαθήστε ξανά.");
+			  console.log(error);
+			});
+		  });
+		</script>
+
+	</body>
+</html>
