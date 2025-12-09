@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="el">
 	<head>
 		<title>Soulflow.gr</title>
 		<meta charset="utf-8" />
@@ -34,13 +34,16 @@
 				<form id="contact-form">
 					<div class="row gtr-uniform">
 						<div class="col-6 col-12-xsmall">
-							<input type="text" name="name" id="name" placeholder="Όνομα" required />
+							<label for="name">Όνομα</label>
+							<input type="text" name="name" id="name" required />
 						</div>
 						<div class="col-6 col-12-xsmall">
-							<input type="email" name="email" id="email" placeholder="Email" required />
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" required />
 						</div>
 						<div class="col-12">
-							<textarea name="message" id="message" placeholder="Μήνυμα" rows="4" required></textarea>
+							<label for="message">Μήνυμα</label>
+							<textarea name="message" id="message" rows="4" required></textarea>
 						</div>
 						<div class="col-12">
 							<ul class="actions special">
@@ -83,22 +86,15 @@
 		  (function(){
 			emailjs.init("s_aK4B0XzydrNTiST");
 		  })();
-
 		  document.getElementById("contact-form").addEventListener("submit", function(e) {
 			e.preventDefault();
-
 			emailjs.sendForm(
 			  "service_m92koei",
 			  "template_klgu0gm",
 			  this
 			).then(function() {
-
-			  // Hide the form
 			  document.getElementById("contact-form").style.display = "none";
-
-			  // Show success message
 			  document.getElementById("success-message").style.display = "block";
-
 			}, function(error) {
 			  alert("Αποτυχία αποστολής. Προσπαθήστε ξανά.");
 			  console.log(error);
