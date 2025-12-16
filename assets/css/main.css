@@ -2028,7 +2028,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			box-shadow: inset 0 0 0 2px #fbbdb0;
+			box-shadow: inset 0 0 0 2px #ae5645;
 		}
 
 	select {
@@ -2130,7 +2130,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: inset 0 0 0 2px #fbbdb0;
+			box-shadow: inset 0 0 0 2px #ae5645;
 		}
 
 	input[type="radio"] + label:before {
@@ -2275,6 +2275,15 @@ input, select, textarea {
 			.image.fit img {
 				width: 100%;
 			}
+			
+		.espaimg {
+			display: block;
+			margin: 0 auto;
+			padding-top: 1.5em;
+			max-width: 100%;
+			width: 30em;
+			height: auto;
+		}
 
 /* List */
 
@@ -2664,7 +2673,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #fbbdb0;
+			background-color: #ae5645;
 			border: 0;
 			box-shadow: none;
 			color: #ffffff !important;
@@ -2886,7 +2895,7 @@ input, select, textarea {
 
 		#footer footer {
 			bottom: 2em;
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(255, 255, 255, 0.95);
 			left: 0;
 			position: absolute;
 			text-align: center;
@@ -3027,11 +3036,11 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				height: 80vh;
+				height: 50vh;
 			}
 
 				#header:after {
-					height: 80vh;
+					height: 50vh;
 				}
 
 				#header header {
@@ -3059,7 +3068,7 @@ input, select, textarea {
 	width: 90vw;
 }
 #header header h1 {
-	top: 80px;
+	top: 40px;
 }
 .mobile-only {
 	display: block !important;
